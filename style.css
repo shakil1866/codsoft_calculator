@@ -1,15 +1,39 @@
-body {
-    display: flex;
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    /* height: 100vh; */
+    background-color: aquamarine;
+}
+nav{
+    text-align: center;
+    padding: 20px;
+    background-color: green;
+    /* width: 50%; */
+}
+nav h1{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+}
+main{
+    width: 50%;
+       display: flex;
+       flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+    align-self: center;
     margin: 0;
+    position: relative;
+    left: 25%;
 }
 
 .calculator {
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-end-end-radius:15px;
+    border-end-start-radius:  15px;
+
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background: #fff;
 }
@@ -44,4 +68,24 @@ button:hover {
 
 button:active {
     background: #ccc;
+}
+
+@media only screen and (max-width: 500px)  {
+    nav h1 {
+        font-size: 20px;
+    }
+   .calculator {
+    width: 100%;
+    }
+    #display {
+        font-size: 1.5em;
+    }
+    button {
+        font-size: 1em;
+    }
+    main {
+        /* margin: 10px; */
+        width: 100%;
+        left: 0;
+    }
 }
